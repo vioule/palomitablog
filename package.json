@@ -1,0 +1,17 @@
+{
+  "name": "palomitablog",
+  "version": "2.0.0",
+  "author": "Vincent Cano",
+  "license": "UNLICENSED",
+  "description": "Palomita Blog est un blog sur la mode, la cuisine, les voyages et le lifestyle.",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vioule/palomitablog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vioule/palomitablog/issues"
+  },
+  "homepage": "https://github.com/vioule/palomitablog#readme"
+}
