@@ -1,1 +1,3 @@
 node_modules
+frontoffice/client/public/index.js
+backoffice/client/public/index.js
