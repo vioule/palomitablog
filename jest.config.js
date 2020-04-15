@@ -1,4 +1,14 @@
 module.exports = {
+  setupFiles: ['<rootDir>/jest.setup.js'],
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  globals: {
+    'ts-jest': {
+      tsConfig: {
+        jsx: 'react',
+        module: 'commonjs',
+        esModuleInterop: true,
+      },
+      babelConfig: '<rootDir>/.babelrc',
+    },
+  },
 };
