@@ -5,6 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    "plugin:jest/recommended",
     'airbnb',
   ],
   globals: {
@@ -22,6 +23,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'jest',
   ],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: [".jsx", ".tsx"] }],
