@@ -1,9 +1,14 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
+import styled from 'styled-components';
 
-const App = () => (
-  <h1>
+const Body = styled.h1`
+  color: red;
+`;
+
+const App: React.SFC = () => (
+  <Body>
     Bonjour, vous êtes sur l&#39;application backoffice de Palomita Blog.
-  </h1>
+  </Body>
 );
 export default hot(App);
