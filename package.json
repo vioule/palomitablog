@@ -58,6 +58,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "jest": "^25.3.0",
+    "jest-styled-components": "^7.0.2",
     "react-hot-loader": "^4.12.20",
     "styled-components": "^5.1.0",
     "terser-webpack-plugin": "^2.3.5",

@@ -1,5 +1,5 @@
 module.exports = {
-  setupFiles: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   preset: 'ts-jest',
   globals: {
     'ts-jest': {
