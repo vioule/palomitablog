@@ -5,19 +5,23 @@
 #### - Build images :
 >Exec the command in the root directory.
 
-    // front office //
+    // FRONT OFFICE //
     docker build . -f docker/frontoffice.dockerFile -t palomitablog_frontoffice
-    // back office //
+    // BACK OFFICE //
     docker build . -f docker/backoffice.dockerFile -t palomitablog_backoffice
 
 #### - Run containers :
     // FRONT OFFICE //
     // development environment //
     docker-compose -f docker/frontoffice.dev.docker-compose.yml up
+    // test environment //
+    docker-compose -f docker/frontoffice.test.docker-compose.yml up
 
     // BACK OFFICE //
     // development environment //
     docker-compose -f docker/backoffice.dev.docker-compose.yml up
+    // test environment //
+    docker-compose -f docker/backoffice.test.docker-compose.yml up
 ---
 ## Use with Node :
 
@@ -34,23 +38,23 @@ Install dependencies in the root directory :
 
 Run the app in dev environment :
     
-    // front office //
+    // FRONT OFFICE //
     NODE_ENV=development npm run dev:frontoffice
-    // back office //
+    // BACK OFFICE //
     NODE_ENV=development npm run dev:backoffice
 
 Build the production app with webpack :
 
-    // front office //
+    // FRONT OFFICE //
     npm run build:frontoffice
-    // back office //
+    // BACK OFFICE //
     npm run build:backoffice
 
 Run the app in prod environment :
 
-    // front office //
+    // FRONT OFFICE //
     npm run start:frontoffice
-    // back office //
+    // BACK OFFICE //
     npm run start:backoffice
 
 Run all the tests :
@@ -66,4 +70,3 @@ Run tests in watch mode :
  [http://localhost:8080](http://localhost:8080)
 * Back office:
  [http://localhost:8081](http://localhost:8081)
- 

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  backoffice:
+    image: palomitablog_backoffice
+    container_name: palomitablog_backoffice_test
+    build:
+      context: ../
+      dockerfile: ./docker/backoffice.dockerFile
+    command: npm run test:watch
+    volumes:
+      - "../backoffice:/palomitablog/backoffice"
+    environment:
+      - NODE_ENV=test
