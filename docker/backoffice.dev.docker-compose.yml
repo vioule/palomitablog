@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backoffice:
+    image: palomitablog_backoffice
+    container_name: palomitablog_backoffice_development
+    build:
+      context: ../
+      dockerfile: ./docker/backoffice.dockerFile
+    ports:
+      - "8081:8081"
+    command: npm run dev:backoffice
+    volumes:
+      - "../backoffice:/palomitablog/backoffice"
+    environment:
+      - NODE_ENV=development

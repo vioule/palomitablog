@@ -15,8 +15,8 @@
   "scripts": {
     "build:frontoffice": "webpack --config frontoffice/client/webpack.prod.js",
     "build:backoffice": "webpack --config backoffice/client/webpack.prod.js",
-    "dev:frontoffice": "NODE_ENV=development node frontoffice/server",
-    "dev:backoffice": "NODE_ENV=development node backoffice/server",
+    "dev:frontoffice": "node frontoffice/server",
+    "dev:backoffice": "node backoffice/server",
     "start:frontoffice": "node frontoffice/server",
     "start:backoffice": "node backoffice/server",
     "test": "jest",

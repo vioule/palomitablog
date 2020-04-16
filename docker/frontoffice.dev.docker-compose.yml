@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontoffice:
+    image: palomitablog_frontoffice
+    container_name: palomitablog_frontoffice_development
+    build:
+      context: ../
+      dockerfile: ./docker/frontoffice.dockerFile
+    ports:
+      - "8080:8080"
+    command: npm run dev:frontoffice
+    volumes:
+      - "../frontoffice:/palomitablog/frontoffice"
+    environment:
+      - NODE_ENV=development
