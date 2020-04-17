@@ -1,0 +1,45 @@
+version: '3'
+services:
+  frontoffice:
+    image: palomitablog_frontoffice
+    container_name: palomitablog_frontoffice_development
+    build:
+      context: ../
+      dockerfile: ./docker/frontoffice.dockerFile
+    ports:
+      - "8080:8080"
+    command: npm run dev:frontoffice
+    volumes:
+      - "../frontoffice:/palomitablog/frontoffice"
+    environment:
+      - NODE_ENV=development
+    networks:
+      default:
+        aliases:
+          - palomitablog_frontoffice
+  backoffice:
+    image: palomitablog_backoffice
+    container_name: palomitablog_backoffice_development
+    build:
+      context: ../
+      dockerfile: ./docker/backoffice.dockerFile
+    ports:
+      - "8081:8081"
+    command: npm run dev:backoffice
+    volumes:
+      - "../backoffice:/palomitablog/backoffice"
+    environment:
+      - NODE_ENV=development
+    networks:
+      default:
+        aliases:
+          - palomitablog_backoffice
+  proxy:
+    image: palomitablog_nginx
+    container_name: palomitablog_nginx_proxy
+    build:
+      context: ../
+      dockerfile: ./docker/nginx.dockerFile
+    ports:
+      - "80:80"
+      - "443:443"
