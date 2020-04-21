@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Body from './styled-components';
 
-const Contact: React.SFC = () => (
+const Contact: React.FC = () => (
   <Body>
     <Link to="/">
       Accueil

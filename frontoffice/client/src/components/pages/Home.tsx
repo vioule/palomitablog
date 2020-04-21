@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Body from './styled-components';
 
-const Home: React.SFC = () => (
+const Home: React.FC = () => (
   <Body>
     <Link to="/article">
       Article

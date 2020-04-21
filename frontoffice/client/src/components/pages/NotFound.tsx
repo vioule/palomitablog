@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Body from './styled-components';
 
-const NotFound: React.SFC = () => (
+const NotFound: React.FC = () => (
   <Body>
     <Link to="/">
       Accueil
