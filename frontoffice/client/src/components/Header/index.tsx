@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
+import Hamburger from './Hamburger';
 
 const Header = styled.header`
   position: fixed;
@@ -11,6 +12,8 @@ const Header = styled.header`
   max-width: 1920px;
   transform: translateX(-50%);
   left: 50%;
+  display: flex;
+  justify-content: space-between;
   @media ${({ theme }) => theme.medias.mid} {
     padding: 16px;
   };
@@ -31,5 +34,6 @@ const Header = styled.header`
 export default (() => (
   <Header>
     <Logo />
+    <Hamburger />
   </Header>
 )) as React.FC;

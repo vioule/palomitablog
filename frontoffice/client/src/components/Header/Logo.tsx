@@ -5,6 +5,8 @@ import styled from 'styled-components';
 const Logo = styled.div`
   z-index: 100;
   display: inline;
+  line-height: 1rem;
+  font-size: 1.2rem;
   .phone {
     display: none;
   }

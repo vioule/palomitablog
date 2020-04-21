@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+
 const Reset = createGlobalStyle`
   * {
     margin: 0;
@@ -7,7 +8,11 @@ const Reset = createGlobalStyle`
     box-sizing: border-box;
     position: relative;
     text-decoration: none;
-  }
+    border: none;
+  };
+  *:before, *:after {
+    box-sizing: border-box
+  };
   html {
     max-width: 1920px;
     margin: 0 auto;
@@ -27,12 +32,14 @@ const Reset = createGlobalStyle`
     };
     @media ${({ theme }) => theme.medias.phone} {
       padding: 0 30px;
-      font-size: 9px;
+      font-size: 8px;
     };
     @media ${({ theme }) => theme.medias.phonexs} {
       padding: 0 20px;
-      font-size: 8px;
     };
+  };
+  button:hover {
+    cursor: pointer;
   }
 `;
 export default Reset;
