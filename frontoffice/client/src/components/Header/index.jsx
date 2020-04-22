@@ -31,9 +31,9 @@ const Header = styled.header`
   };
 `;
 
-export default (() => (
+export default () => (
   <Header>
     <Logo />
     <Hamburger />
   </Header>
-)) as React.FC;
+);

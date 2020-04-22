@@ -25,9 +25,9 @@ const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.black};
 `;
 
-export default (() => (
+export default () => (
   <Logo>
     <StyledLink to="/" className="desktop">Palomita</StyledLink>
     <StyledLink to="/" className="phone">P.</StyledLink>
   </Logo>
-)) as React.FC;
+);

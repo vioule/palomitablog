@@ -6,7 +6,7 @@ const Body = styled.h1`
   color: red;
 `;
 
-const App: React.SFC = () => (
+const App = () => (
   <Body>
     Bonjour, vous êtes sur l&#39;application backoffice de Palomita Blog.
   </Body>

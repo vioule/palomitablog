@@ -13,7 +13,7 @@ import GlobalStyle from '../theme/Reset';
 import Theme from '../theme';
 import Header from './Header';
 
-const App: React.FC = () => {
+const App = () => {
   const location = useLocation();
   return (
     <ThemeProvider theme={Theme}>

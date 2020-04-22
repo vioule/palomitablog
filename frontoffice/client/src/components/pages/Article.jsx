@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Body from './styled-components';
 
-const About: React.FC = () => (
+const Article = () => (
   <Body>
     <Link to="/">
       Accueil
@@ -10,12 +10,12 @@ const About: React.FC = () => (
     <Link to="/contact">
       Contact
     </Link>
-    <Link to="/article">
-      Article
+    <Link to="/about">
+      A propos
     </Link>
     <Link to="/legals">
       Mentions légales
     </Link>
   </Body>
 );
-export default About;
+export default Article;

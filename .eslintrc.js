@@ -12,25 +12,16 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
   plugins: [
     'react',
-    '@typescript-eslint',
     'jest',
   ],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: [".jsx", ".tsx"] }],
+    'react/jsx-filename-extension': [1, { extensions: [".jsx"] }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/extensions': ['error', 'always', {js: 'never',ts: 'never',tsx: 'never'}],
+    'import/extensions': ['error', 'always', {js: 'never',jsx: 'never'}],
   },
   settings: {
-    'import/resolver': {node: {extensions: ['.js','.ts','.tsx']}},
+    'import/resolver': {node: {extensions: ['.js','.jsx']}},
 },
 };

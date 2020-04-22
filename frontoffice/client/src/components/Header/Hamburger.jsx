@@ -23,10 +23,10 @@ const Hamburger = styled.button`
   };
 `;
 
-export default (() => (
+export default () => (
   <Hamburger>
     <div />
     <div />
     <div />
   </Hamburger>
-)) as React.FC;
+);
