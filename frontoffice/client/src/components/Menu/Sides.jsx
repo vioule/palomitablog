@@ -13,17 +13,19 @@ const Side = styled.div`
   @media ${({ theme }) => theme.medias.portrait} {
     width: 100%;
     align-items: flex-start;
+    min-height: 600px;
   };
-  @media ${({ theme }) => theme.medias.mid} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopM}`} {
+    min-height: 600px;
   };
-  @media ${({ theme }) => theme.medias.sml} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopS}`} {
+    min-height: 500px;
   };
-  @media ${({ theme }) => theme.medias.portrait} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobile}`} {
     min-height: 350px;
   };
-  @media ${({ theme }) => theme.medias.phone} {
-  };
-  @media ${({ theme }) => theme.medias.phonexs} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileS}`} {
+    min-height: 250px;
   };
 `;
 const ColorSide = styled(Side)`

@@ -17,23 +17,23 @@ const Reset = createGlobalStyle`
     margin: 0 auto;
     padding: 0 200px;
     font-size: 16px;
-    @media ${({ theme }) => theme.medias.mid} {
+    @media ${({ theme }) => theme.medias.desktopM} {
       padding: 0 150px;
       font-size: 14px;
     };
-    @media ${({ theme }) => theme.medias.sml} {
+    @media ${({ theme }) => theme.medias.desktopS} {
       padding: 0 100px;
       font-size: 12px;
     };
-    @media ${({ theme }) => theme.medias.portrait} {
+    @media ${({ theme }) => theme.medias.mobile} {
       padding: 0 60px;
       font-size: 10px;
     };
-    @media ${({ theme }) => theme.medias.phone} {
+    @media ${({ theme }) => theme.medias.mobileS} {
       padding: 0 30px;
       font-size: 8px;
     };
-    @media ${({ theme }) => theme.medias.phonexs} {
+    @media ${({ theme }) => theme.medias.mobileXS} {
       padding: 0 20px;
     };
   };

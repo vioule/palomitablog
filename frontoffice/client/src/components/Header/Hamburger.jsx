@@ -26,7 +26,7 @@ const Button = styled.button`
     bottom: 0;
     top: unset;
   };
-  
+
   ${({ trigger }) => (trigger && css`
     &>div {
       transform: rotateZ(45deg);
@@ -41,19 +41,19 @@ const Button = styled.button`
     };
   `)};
 
-  @media ${({ theme }) => theme.medias.mid} {
+  @media ${({ theme }) => theme.medias.desktopM} {
     margin: 16px;
   };
-  @media ${({ theme }) => theme.medias.sml} {
+  @media ${({ theme }) => theme.medias.desktopS} {
     margin: 12px;
   };
-  @media ${({ theme }) => theme.medias.portrait} {
+  @media ${({ theme }) => theme.medias.mobile} {
     margin: 10px;
   };
-  @media ${({ theme }) => theme.medias.phone} {
+  @media ${({ theme }) => theme.medias.mobileS} {
     margin: 7px;
   };
-  @media ${({ theme }) => theme.medias.phonexs} {
+  @media ${({ theme }) => theme.medias.mobileXS} {
     margin: 5px;
   };
 `;

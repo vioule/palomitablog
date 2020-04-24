@@ -20,6 +20,7 @@ const StyledLink = styled(Link)`
     right: 0;
     padding-left: 3rem;
     text-align: left;
+    text-shadow: none;
     background-color: ${({ theme }) => theme.colors.dark};
     color: ${({ theme }) => theme.colors.lighten};
     clip-path: inset(0 0 0 100%);
@@ -30,18 +31,28 @@ const StyledLink = styled(Link)`
       clip-path: inset(0 0 0 0);
     };
   };
-  @media ${({ theme }) => theme.medias.mid} {
+  @media ${({ theme }) => theme.medias.desktopM} {
     padding-right: calc((100% - 400px )/2);
   };
-  @media ${({ theme }) => theme.medias.sml} {
+  @media ${({ theme }) => theme.medias.desktopS} {
     padding-right: calc((100% - 345px )/2);
+  };
+  @media ${({ theme }) => theme.medias.mobile} {
+    padding-right: calc((100% - 230px )/2);
+    font-size: 5rem;
+  };
+  @media ${({ theme }) => theme.medias.mobileS} {
+    padding-right: calc((100% - 185px )/2);
+  };
+  @media ${({ theme }) => theme.medias.mobileXS} {
+    padding-right: calc((100% - 145px )/2);
+    font-size: 4rem;
   };
   @media ${({ theme }) => theme.medias.portrait} {
     text-align: left;
     direction: ltr;
-    padding-left: calc((100% - 285px )/2);
+    padding-left: calc((100% - 460px )/2);
     padding-right: 3rem;
-    font-size: 5rem;
     &:after{
       right: unset;
       left: 0;
@@ -51,10 +62,22 @@ const StyledLink = styled(Link)`
       clip-path: inset(0 100% 0 0);
     };
   };
-  @media ${({ theme }) => theme.medias.phone} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopM}`} {
+    padding-left: calc((100% - 400px )/2);
+  };
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopS}`} {
+    padding-left: calc((100% - 345px )/2);
+  };
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobile}`} {
+    padding-left: calc((100% - 230px )/2);
+    font-size: 5rem;
+  };
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileS}`} {
     padding-left: calc((100% - 185px )/2);
   };
-  @media ${({ theme }) => theme.medias.phonexs} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileXS}`} {
+    padding-left: calc((100% - 145px )/2);
+    font-size: 4rem;
   };
 `;
 

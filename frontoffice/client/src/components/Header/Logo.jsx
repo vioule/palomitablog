@@ -14,11 +14,26 @@ const Logo = styled.div`
   .phone {
     display: none;
   }
-  @media ${({ theme }) => theme.medias.mid} {
+  @media ${({ theme }) => theme.medias.desktopM} {
     margin: 16px;
   };
-  @media ${({ theme }) => theme.medias.sml} {
+  @media ${({ theme }) => theme.medias.desktopS} {
     margin: 12px;
+  };
+  @media ${({ theme }) => theme.medias.mobile} {
+    margin: 10px;
+    & .desktop {
+      display: none;
+    }
+    & .phone {
+      display: inline;
+    }
+  };
+  @media ${({ theme }) => theme.medias.mobileS} {
+    margin: 7px;
+  };
+  @media ${({ theme }) => theme.medias.mobileXS} {
+    margin: 5px;
   };
   @media ${({ theme }) => theme.medias.portrait} {
     & .desktop {
@@ -27,13 +42,6 @@ const Logo = styled.div`
     & .phone {
       display: inline;
     }
-    margin: 10px;
-  };
-  @media ${({ theme }) => theme.medias.phone} {
-    margin: 7px;
-  };
-  @media ${({ theme }) => theme.medias.phonexs} {
-    margin: 5px;
   };
 `;
 

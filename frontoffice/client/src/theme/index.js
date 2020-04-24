@@ -12,10 +12,11 @@ export default {
     special: "'Playfair Display', serif;",
   },
   medias: {
-    mid: '(max-width: 1440px)',
-    sml: '(max-width: 1024px)',
-    portrait: '(max-width: 768px), (orientation: portrait)',
-    phone: '(max-width: 480px)',
-    phonexs: '(max-width: 320px)',
+    desktopM: '(max-width: 1440px)',
+    desktopS: '(max-width: 1024px)',
+    mobile: '(max-width: 768px)',
+    mobileS: '(max-width: 480px)',
+    mobileXS: '(max-width: 320px)',
+    portrait: '(orientation: portrait)',
   },
 };
