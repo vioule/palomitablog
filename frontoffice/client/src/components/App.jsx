@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import GlobalStyle from '../theme/Reset';
 import Theme from '../theme';
 import Header from './Header';
+import Menu from './Menu';
 
 const App = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const App = () => {
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <Header />
+      <Menu />
       <TransitionGroup>
         <CSSTransition
           key={location.key}
