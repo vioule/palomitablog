@@ -39,6 +39,6 @@ const Reset = createGlobalStyle`
   };
   button:hover {
     cursor: pointer;
-  }
+  };
 `;
 export default Reset;
