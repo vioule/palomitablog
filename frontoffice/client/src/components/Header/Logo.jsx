@@ -11,6 +11,7 @@ const Logo = styled.div`
   margin: 20px;
   line-height: 1rem;
   font-size: 1.2rem;
+  font-weight: 700;
   .phone {
     display: none;
   }

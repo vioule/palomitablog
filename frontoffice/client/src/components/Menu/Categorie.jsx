@@ -12,6 +12,7 @@ const StyledLink = styled(Link)`
   padding-right: calc((100% - 460px)/2);
   padding-left: 3rem;
   direction: rtl;
+  font-weight: 700;
   &:after{
     content: '${({ name }) => name}';
     width: 100%;
@@ -56,7 +57,7 @@ const StyledLink = styled(Link)`
     &:after{
       right: unset;
       left: 0;
-      padding-left: none;
+      padding-left: 0;
       padding-right: 3rem;
       text-align: right;
       clip-path: inset(0 100% 0 0);
@@ -82,7 +83,7 @@ const StyledLink = styled(Link)`
 `;
 
 export default ({ name }) => (
-  <StyledLink name={name}>
+  <StyledLink name={name} to={`/${name}`}>
     <span>{name}</span>
   </StyledLink>
 );

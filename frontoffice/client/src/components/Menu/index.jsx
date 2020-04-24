@@ -17,6 +17,7 @@ const Nav = styled.nav`
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s 0s, visibility 0s 1s;
+  overflow: auto;
 
   ${({ trigger }) => (trigger && css`
     opacity: 1;
