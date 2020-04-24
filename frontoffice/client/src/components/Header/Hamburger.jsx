@@ -4,8 +4,13 @@ import { connect } from 'react-redux';
 import setMenu from '../../store/menu/actions';
 
 const Button = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 1.2rem;
   height: 1rem;
+  background-color: transparent;
+  margin: 20px;
   &>div {
     position: absolute;
     width: 100%;
@@ -24,6 +29,21 @@ const Button = styled.button`
   &>div:last-child {
     bottom: ${({ trigger }) => (trigger ? 'calc(50% - 1px)' : 0)};
     top: unset;
+  };
+  @media ${({ theme }) => theme.medias.mid} {
+    margin: 16px;
+  };
+  @media ${({ theme }) => theme.medias.sml} {
+    margin: 12px;
+  };
+  @media ${({ theme }) => theme.medias.portrait} {
+    margin: 10px;
+  };
+  @media ${({ theme }) => theme.medias.phone} {
+    margin: 7px;
+  };
+  @media ${({ theme }) => theme.medias.phonexs} {
+    margin: 5px;
   };
 `;
 
