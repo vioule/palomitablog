@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { connect } from 'react-redux';
 import { CategorieSide, LinkSide } from './Sides';
 
 const Nav = styled.nav`
+  display: flex;
   position: fixed;
   width: 100%;
   max-width: 1920px;
@@ -13,10 +14,16 @@ const Nav = styled.nav`
   transform: translateX(-50%);
   height: 100vh;
   z-index: 1000;
-  opacity: ${({ trigger }) => (trigger ? 1 : 0)};
-  visibility: ${({ trigger }) => (trigger ? 'visible' : 'hidden')};
-  transition: ${({ trigger }) => (trigger ? 'opacity 1s 0s, visibility 0s 0s' : 'opacity 1s 0s, visibility 0s 1s')};
-  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s 0s, visibility 0s 1s;
+
+  ${({ trigger }) => (trigger && css`
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s 0s, visibility 0s 0s;
+  `)};
+  
   @media ${({ theme }) => theme.medias.portrait} {
     flex-direction: column;
   };

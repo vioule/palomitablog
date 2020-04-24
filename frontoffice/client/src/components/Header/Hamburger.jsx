@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { connect } from 'react-redux';
 import setMenu from '../../store/menu/actions';
 
@@ -17,19 +17,30 @@ const Button = styled.button`
     border: 1px solid ${({ theme }) => theme.colors.black};
     top: calc(50% - 1px);
     border-radius: 1px;
-    transform: ${({ trigger }) => (trigger ? 'rotateZ(45deg)' : 'none')};
-    transition: ${({ trigger }) => (trigger
-    ? 'transform .25s .25s, top .25s 0s, bottom .25s 0s'
-    : 'transform .25s 0s, top .25s .25s, bottom .25s .25s')};
+    transition: transform .25s 0s, top .25s .25s, bottom .25s .25s;
   }
   &>div:first-child {
-    top: ${({ trigger }) => (trigger ? 'calc(50% - 1px)' : 0)};
-    transform: ${({ trigger }) => (trigger ? 'rotateZ(-45deg)' : 'none')};
+    top: 0;
   };
   &>div:last-child {
-    bottom: ${({ trigger }) => (trigger ? 'calc(50% - 1px)' : 0)};
+    bottom: 0;
     top: unset;
   };
+  
+  ${({ trigger }) => (trigger && css`
+    &>div {
+      transform: rotateZ(45deg);
+      transition: transform .25s .25s, top .25s 0s, bottom .25s 0s;
+    }
+    &>div:first-child {
+    top: calc(50% - 1px);
+    transform: rotateZ(-45deg);
+    };
+    &>div:last-child {
+      bottom: calc(50% - 1px);
+    };
+  `)};
+
   @media ${({ theme }) => theme.medias.mid} {
     margin: 16px;
   };
