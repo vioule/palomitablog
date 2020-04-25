@@ -83,7 +83,7 @@ const StyledLink = styled(Link)`
 `;
 
 export default ({ name }) => (
-  <StyledLink name={name} to={`/${name}`}>
+  <StyledLink name={name} to={`/${name}`} className="categorie">
     <span>{name}</span>
   </StyledLink>
 );

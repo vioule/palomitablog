@@ -1,7 +1,8 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { CategorieSide, LinkSide } from './Sides';
+import Animation from './styled-components/animation';
 
 const Nav = styled.nav`
   display: flex;
@@ -14,16 +15,9 @@ const Nav = styled.nav`
   transform: translateX(-50%);
   height: 100vh;
   z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s 0s, visibility 0s 1s;
   overflow: auto;
 
-  ${({ trigger }) => (trigger && css`
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s 0s, visibility 0s 0s;
-  `)};
+  ${Animation};
   
   @media ${({ theme }) => theme.medias.portrait} {
     flex-direction: column;

@@ -1,36 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Instagram, Pinterest } from '../Socials';
 
-const StyledLink = styled(Link)`
-  font-family: ${({ theme }) => theme.fonts.special};
-  color: ${({ theme }) => theme.colors.black};
-  font-size: 1.8rem;
-  line-height: 1.8rem;
+const React = require('react');
+
+const Socials = styled.div`
   padding-left: calc((100% - 460px)/2);
-  padding-right: 3rem;
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  &:after{
-    content: '${({ name }) => name}';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 3.8rem;
-    padding-right: 3rem;
-    text-align: right;
-    background-color: ${({ theme }) => theme.colors.lighten};
-    color: ${({ theme }) => theme.colors.normal};
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path .5s cubic-bezier(.23, 1.25, .46, 1);
-  };
-  &:hover {
-    &:after{
-      clip-path: inset(0 0 0 0);
-    };
-  };
   @media ${({ theme }) => theme.medias.desktopM} {
     padding-left: calc((100% - 400px )/2);
   };
@@ -47,18 +22,8 @@ const StyledLink = styled(Link)`
     padding-left: calc((100% - 145px )/2);
   };
   @media ${({ theme }) => theme.medias.portrait} {
-    text-align: right;
-    direction: rtl;
     padding-right: calc((100% - 460px )/2);
-    padding-left: 3rem;
-    &:after{
-      left: 0;
-      right: unset;
-      padding-right: 0;
-      padding-left: 3rem;
-      text-align: left;
-      clip-path: inset(0 0 0 100%);
-    };
+    padding-left: 0;
   };
   @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopM}`} {
     padding-right: calc((100% - 400px )/2);
@@ -77,13 +42,9 @@ const StyledLink = styled(Link)`
   };
 `;
 
-export const Contact = () => (
-  <StyledLink name="Contact" to="/contact" className="pagelink">
-    <span>Contact</span>
-  </StyledLink>
-);
-export const About = () => (
-  <StyledLink name="A propos" to="/about" className="pagelink">
-    <span>A propos</span>
-  </StyledLink>
+export default () => (
+  <Socials>
+    <Instagram className="social" />
+    <Pinterest className="social" />
+  </Socials>
 );

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Categorie from './Categorie';
 import { Contact, About } from './PageLink';
+import Socials from './Socials';
 
 const Side = styled.div`
   width: 50%;
@@ -49,5 +50,6 @@ export const LinkSide = () => (
   <Side>
     <Contact />
     <About />
+    <Socials />
   </Side>
 );
