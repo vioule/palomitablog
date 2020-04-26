@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { CategorieLayout } from './styled-components/layout';
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.special};
   color: ${({ theme }) => theme.colors.dark};
