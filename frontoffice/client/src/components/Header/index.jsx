@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import Hamburger from './Hamburger';
 
-const Header = styled.header`
+export const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 50%;
@@ -15,8 +15,8 @@ const Header = styled.header`
 `;
 
 export default () => (
-  <Header>
+  <StyledHeader>
     <Logo />
     <Hamburger />
-  </Header>
+  </StyledHeader>
 );
