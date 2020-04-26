@@ -8,8 +8,8 @@ export default {
     dark: '#8E2F1C',
   },
   fonts: {
-    default: "'Roboto', sans-serif;",
-    special: "'Playfair Display', serif;",
+    default: "'Roboto',sans-serif",
+    special: "'Playfair Display',serif",
   },
   medias: {
     desktopM: '(max-width: 1440px)',

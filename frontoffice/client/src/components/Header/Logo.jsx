@@ -46,7 +46,7 @@ const Logo = styled.div`
   };
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   font-family: ${({ theme }) => theme.fonts.special};
   color: ${({ theme }) => theme.colors.black};
 `;
