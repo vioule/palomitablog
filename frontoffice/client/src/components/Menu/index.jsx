@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { CategorieSide, LinkSide } from './Sides';
 import Animation from './styled-components/animation';
+import setMenu from '../../store/menu/actions';
 
 const Nav = styled.nav`
   display: flex;
@@ -24,13 +25,22 @@ const Nav = styled.nav`
   };
 `;
 
-const Menu = ({ trigger }) => (
-  <Nav trigger={trigger}>
-    <CategorieSide />
-    <LinkSide />
-  </Nav>
-);
+const Menu = ({ trigger, setMenu }) => {
+  const onClick = (e) => {
+    e.stopPropagation();
+    return e.target.className.search(/(categorie|pagelink)/g) > -1
+      ? setMenu(!trigger)
+      : null;
+  };
+  return (
+    <Nav trigger={trigger} onClick={onClick}>
+      <CategorieSide />
+      <LinkSide />
+    </Nav>
+  );
+};
 
 export default connect(
   (state) => ({ trigger: state.menu }),
+  { setMenu },
 )(Menu);

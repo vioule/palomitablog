@@ -20,7 +20,8 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: [".jsx"] }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/extensions': ['error', 'always', {js: 'never',jsx: 'never'}],
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'no-shadow': 'off'
   },
   settings: {
     'import/resolver': {node: {extensions: ['.js','.jsx']}},
