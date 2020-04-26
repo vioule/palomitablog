@@ -4,7 +4,7 @@ import Categorie from './Categorie';
 import { Contact, About } from './PageLink';
 import Socials from './Socials';
 
-const Side = styled.div`
+export const Side = styled.div`
   width: 50%;
   height: 100%;
   min-height: 250px;
@@ -30,7 +30,7 @@ const Side = styled.div`
     min-height: 250px;
   };
 `;
-const ColorSide = styled(Side)`
+export const ColorSide = styled(Side)`
   background-color: ${({ theme }) => theme.colors.lighten};
   border-right: 1px solid ${({ theme }) => theme.colors.normal};
   align-items: flex-end;
