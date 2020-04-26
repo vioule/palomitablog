@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const React = require('react');
 
-const SocialLink = styled.a.attrs({ target: '_blank' })`
+export const SocialLink = styled.a.attrs({ target: '_blank' })`
   color: ${({ theme }) => theme.colors.dark};
   display: inline-block;
   margin-right: 1rem;
