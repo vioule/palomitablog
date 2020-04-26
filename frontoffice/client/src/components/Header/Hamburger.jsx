@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { connect } from 'react-redux';
 import setMenu from '../../store/menu/actions';
 
-const Button = styled.button`
+export const Button = styled.button`
   position: absolute;
   top: 0;
   right: 0;
