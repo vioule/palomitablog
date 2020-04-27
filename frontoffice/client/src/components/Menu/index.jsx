@@ -5,7 +5,7 @@ import { CategorieSide, LinkSide } from './Sides';
 import Animation from './styled-components/animation';
 import setMenu from '../../store/menu/actions';
 
-const Nav = styled.nav`
+export const Nav = styled.nav`
   display: flex;
   position: fixed;
   width: 100%;
@@ -25,10 +25,10 @@ const Nav = styled.nav`
   };
 `;
 
-const Menu = ({ trigger, setMenu }) => {
+export const Menu = ({ trigger, setMenu }) => {
   const onClick = (e) => {
     e.stopPropagation();
-    return e.target.className.search(/(categorie|pagelink)/g) > -1
+    return e.target.className.search(/(categorie|pagelink)\b/g) > -1
       ? setMenu(!trigger)
       : null;
   };
