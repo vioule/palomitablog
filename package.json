@@ -1,6 +1,6 @@
 {
   "name": "palomitablog",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "Vincent Cano",
   "license": "UNLICENSED",
   "description": "Palomita Blog est un blog sur la mode, la cuisine, les voyages et le lifestyle.",
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.9.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",

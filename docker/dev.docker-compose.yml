@@ -13,10 +13,14 @@ services:
       - "../frontoffice:/palomitablog/frontoffice"
     environment:
       - NODE_ENV=development
+      - DATABASE_URI=mongodb://palomitablog:palomitablog@palomitablog_mongo_database:27017/?authSource=palomitablog
     networks:
       default:
         aliases:
           - palomitablog_frontoffice
+    depends_on:
+      - proxy
+      - database
   backoffice:
     image: palomitablog_backoffice
     container_name: palomitablog_backoffice_development
@@ -43,3 +47,17 @@ services:
     ports:
       - "80:80"
       - "443:443"
+  database:
+    image: mongo
+    container_name: palomitablog_mongo_database
+    volumes:
+      - "../mongo.setup.js:/docker-entrypoint-initdb.d/palomitablog.setup.js"
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    networks:
+      default:
+        aliases:
+          - palomitablog_database
