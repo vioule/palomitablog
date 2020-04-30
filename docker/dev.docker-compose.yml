@@ -13,7 +13,7 @@ services:
       - "../frontoffice:/palomitablog/frontoffice"
     environment:
       - NODE_ENV=development
-      - DATABASE_URI=mongodb://palomitablog:palomitablog@palomitablog_mongo_database:27017/?authSource=palomitablog
+      - DATABASE_URI=mongodb://palomitablog:palomitablog@palomitablog_mongo_database:27017/palomitablog?authSource=palomitablog
     networks:
       default:
         aliases:

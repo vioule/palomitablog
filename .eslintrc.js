@@ -21,7 +21,8 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/extensions': ['error', 'always', {js: 'never',jsx: 'never'}],
     'react/prop-types': 'off',
-    'no-shadow': 'off'
+    'no-shadow': 'off',
+    'no-nested-ternary': 'off'
   },
   settings: {
     'import/resolver': {node: {extensions: ['.js','.jsx']}},
