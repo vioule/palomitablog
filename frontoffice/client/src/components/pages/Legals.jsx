@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Body from './styled-components';
+import Body from './styled-components/transitions';
 
 const Legals = () => (
   <Body>

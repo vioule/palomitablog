@@ -1,55 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import { hot } from 'react-hot-loader/root';
-import { Switch, Route, useLocation } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { ThemeProvider } from 'styled-components';
-import Home from './pages/Home';
-import About from './pages/About';
-import Article from './pages/Article';
-import Contact from './pages/Contact';
-import Legals from './pages/Legals';
-import NotFound from './pages/NotFound';
-import GlobalStyle from '../theme/Reset';
-import Theme from '../theme';
 import Header from './Header';
 import Menu from './Menu';
+import { getArticles } from '../store/articles/actions';
+import { AppLoader as Loader } from './Loader';
+import { TransitionDisplay } from './pages/styled-components/transitions';
+import Router from './Router';
 
-const App = () => {
-  const location = useLocation();
+const App = ({
+  getArticles, data, isFetching, isFailed, isValidated,
+}) => {
+  useEffect(() => { getArticles(); }, []);
   return (
-    <ThemeProvider theme={Theme}>
-      <GlobalStyle />
-      <Header />
-      <Menu />
-      <TransitionGroup>
-        <CSSTransition
-          key={location.key}
-          timeout={1000}
-          classNames="fade"
-        >
-          <Switch location={location}>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/article">
-              <Article />
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-            <Route exact path="/contact">
-              <Contact />
-            </Route>
-            <Route exact path="/legals">
-              <Legals />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
-    </ThemeProvider>
+    <>
+      {isFetching && <Loader />}
+      <TransitionDisplay appear={isValidated || isFailed}>
+        {
+        isFetching
+          ? null
+          : isFailed
+            ? <div>Une erreur est survenue.</div>
+            : (
+              <>
+                <Header />
+                <Menu />
+                <Router data={data} />
+              </>
+            )
+      }
+      </TransitionDisplay>
+    </>
   );
 };
-export default hot(App);
+export default hot(
+  connect(
+    (state) => ({ ...state.articles }),
+    { getArticles },
+  )(App),
+);

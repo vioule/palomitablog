@@ -6,7 +6,6 @@ const Body = styled.main`
   position: absolute;
   left: 0;
   top: 0;
-  background-color: lightblue;
   &.fade-enter {
     opacity: 0;
     z-index: 1;
@@ -24,5 +23,10 @@ const Body = styled.main`
     opacity: 0;
     transition: opacity 500ms linear;
   }
+`;
+
+export const TransitionDisplay = styled.div`
+  opacity: ${({ appear }) => (appear ? 1 : 0)};
+  transition: opacity 1s 0s;
 `;
 export default Body;
