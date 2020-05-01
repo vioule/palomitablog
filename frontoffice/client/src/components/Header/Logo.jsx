@@ -15,10 +15,10 @@ const Logo = styled.div`
   .phone {
     display: none;
   }
-  @media ${({ theme }) => theme.medias.desktopM} {
+  @media ${({ theme }) => theme.medias.desktop} {
     margin: 16px;
   };
-  @media ${({ theme }) => theme.medias.desktopS} {
+  @media ${({ theme }) => theme.medias.tablet} {
     margin: 12px;
   };
   @media ${({ theme }) => theme.medias.mobile} {
@@ -30,10 +30,10 @@ const Logo = styled.div`
       display: inline;
     }
   };
-  @media ${({ theme }) => theme.medias.mobileS} {
+  @media ${({ theme }) => theme.medias.mobileM} {
     margin: 7px;
   };
-  @media ${({ theme }) => theme.medias.mobileXS} {
+  @media ${({ theme }) => theme.medias.mobileS} {
     margin: 5px;
   };
   @media ${({ theme }) => theme.medias.portrait} {

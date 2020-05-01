@@ -15,25 +15,25 @@ const Reset = createGlobalStyle`
   html {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 200px;
+    padding: 0 150px;
     font-size: 16px;
-    @media ${({ theme }) => theme.medias.desktopM} {
-      padding: 0 150px;
+    @media ${({ theme }) => theme.medias.desktop} {
+      padding: 0 110px;
       font-size: 14px;
     };
-    @media ${({ theme }) => theme.medias.desktopS} {
-      padding: 0 100px;
+    @media ${({ theme }) => theme.medias.tablet} {
+      padding: 0 90px;
       font-size: 12px;
     };
     @media ${({ theme }) => theme.medias.mobile} {
-      padding: 0 60px;
+      padding: 0 30px;
       font-size: 10px;
     };
-    @media ${({ theme }) => theme.medias.mobileS} {
-      padding: 0 30px;
+    @media ${({ theme }) => theme.medias.mobileM} {
+      padding: 0 25px;
       font-size: 8px;
     };
-    @media ${({ theme }) => theme.medias.mobileXS} {
+    @media ${({ theme }) => theme.medias.mobileS} {
       padding: 0 20px;
     };
   };
