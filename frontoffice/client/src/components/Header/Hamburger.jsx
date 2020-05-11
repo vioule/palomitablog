@@ -42,19 +42,19 @@ export const Button = styled.button`
   `)};
 
   @media ${({ theme }) => theme.medias.desktop} {
-    margin: 16px;
+    margin: 16px 23px;
   };
   @media ${({ theme }) => theme.medias.tablet} {
     margin: 12px;
   };
   @media ${({ theme }) => theme.medias.mobile} {
-    margin: 10px;
+    margin: 15px;
   };
   @media ${({ theme }) => theme.medias.mobileM} {
-    margin: 7px;
+    margin: 7px 5px;
   };
   @media ${({ theme }) => theme.medias.mobileS} {
-    margin: 5px;
+    margin: 5px 3px;
   };
 `;
 

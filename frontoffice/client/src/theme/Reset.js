@@ -23,15 +23,13 @@ const Reset = createGlobalStyle`
     };
     @media ${({ theme }) => theme.medias.tablet} {
       padding: 0 90px;
-      font-size: 12px;
     };
     @media ${({ theme }) => theme.medias.mobile} {
-      padding: 0 30px;
-      font-size: 10px;
+      padding: 0 50px;
     };
     @media ${({ theme }) => theme.medias.mobileM} {
       padding: 0 25px;
-      font-size: 8px;
+      font-size: 12px;
     };
     @media ${({ theme }) => theme.medias.mobileS} {
       padding: 0 20px;

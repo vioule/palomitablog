@@ -16,13 +16,14 @@ const Logo = styled.div`
     display: none;
   }
   @media ${({ theme }) => theme.medias.desktop} {
-    margin: 16px;
+    margin: 16px 23px;
   };
   @media ${({ theme }) => theme.medias.tablet} {
     margin: 12px;
   };
   @media ${({ theme }) => theme.medias.mobile} {
-    margin: 10px;
+    margin: 15px;
+    font-size: 1.5rem;
     & .desktop {
       display: none;
     }
@@ -31,6 +32,7 @@ const Logo = styled.div`
     }
   };
   @media ${({ theme }) => theme.medias.mobileM} {
+    font-size: 1.2rem;
     margin: 7px;
   };
   @media ${({ theme }) => theme.medias.mobileS} {
