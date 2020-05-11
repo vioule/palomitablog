@@ -8,7 +8,7 @@ import Contact from './pages/Contact';
 import Legals from './pages/Legals';
 import NotFound from './pages/NotFound';
 
-export default () => {
+export default ({ data }) => {
   const location = useLocation();
   return (
     <TransitionGroup>
@@ -19,7 +19,7 @@ export default () => {
       >
         <Switch location={location}>
           <Route exact path="/">
-            <Home />
+            <Home data={data} />
           </Route>
           <Route exact path="/article">
             <Article />

@@ -22,7 +22,8 @@ module.exports = {
     'import/extensions': ['error', 'always', {js: 'never',jsx: 'never'}],
     'react/prop-types': 'off',
     'no-shadow': 'off',
-    'no-nested-ternary': 'off'
+    'no-nested-ternary': 'off',
+    'no-underscore-dangle': ["error", { "allow": ["_id"] }]
   },
   settings: {
     'import/resolver': {node: {extensions: ['.js','.jsx']}},

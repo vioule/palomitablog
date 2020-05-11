@@ -8,7 +8,7 @@ export default {
     dark: '#8E2F1C',
   },
   fonts: {
-    default: "'Roboto',sans-serif",
+    default: "'Cormorant Garamond',serif",
     special: "'Playfair Display',serif",
   },
   medias: {
