@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   display: block;
   margin-top: .5rem;
   font-weight: 300;
