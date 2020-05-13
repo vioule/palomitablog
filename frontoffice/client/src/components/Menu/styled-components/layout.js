@@ -6,21 +6,18 @@ export const CategorieLayout = css`
   &:after{
     padding-left: 3rem;
   };
-  @media ${({ theme }) => theme.medias.desktopM} {
+  @media ${({ theme }) => theme.medias.desktop} {
     padding-right: calc((100% - 400px )/2);
   };
-  @media ${({ theme }) => theme.medias.desktopS} {
-    padding-right: calc((100% - 345px )/2);
-  };
   @media ${({ theme }) => theme.medias.mobile} {
-    padding-right: calc((100% - 230px )/2);
+    padding-right: calc((100% - 320px )/2);
     font-size: 5rem;
   };
-  @media ${({ theme }) => theme.medias.mobileS} {
-    padding-right: calc((100% - 185px )/2);
+  @media ${({ theme }) => theme.medias.mobileM} {
+    padding-right: calc((100% - 275px )/2);
   };
-  @media ${({ theme }) => theme.medias.mobileXS} {
-    padding-right: calc((100% - 145px )/2);
+  @media ${({ theme }) => theme.medias.mobileS} {
+    padding-right: calc((100% - 220px )/2);
     font-size: 4rem;
   };
   @media ${({ theme }) => theme.medias.portrait} {
@@ -31,21 +28,18 @@ export const CategorieLayout = css`
       padding-right: 3rem;
     };
   };
-  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopM}`} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktop}`} {
     padding-left: calc((100% - 400px )/2);
   };
-  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopS}`} {
-    padding-left: calc((100% - 345px )/2);
-  };
   @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobile}`} {
-    padding-left: calc((100% - 230px )/2);
+    padding-left: calc((100% - 320px )/2);
     font-size: 5rem;
   };
-  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileS}`} {
-    padding-left: calc((100% - 185px )/2);
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileM}`} {
+    padding-left: calc((100% - 275px )/2);
   };
-  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileXS}`} {
-    padding-left: calc((100% - 145px )/2);
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileS}`} {
+    padding-left: calc((100% - 220px )/2);
     font-size: 4rem;
   };
 `;
@@ -53,39 +47,33 @@ export const CategorieLayout = css`
 export const SocialsLayout = css`
   padding-left: calc((100% - 460px)/2);
   padding-top: 1rem;
-  @media ${({ theme }) => theme.medias.desktopM} {
+  @media ${({ theme }) => theme.medias.desktop} {
     padding-left: calc((100% - 400px )/2);
   };
-  @media ${({ theme }) => theme.medias.desktopS} {
-    padding-left: calc((100% - 345px )/2);
-  };
   @media ${({ theme }) => theme.medias.mobile} {
-    padding-left: calc((100% - 230px )/2);
+    padding-left: calc((100% - 320px )/2);
+  };
+  @media ${({ theme }) => theme.medias.mobileM} {
+    padding-left: calc((100% - 275px )/2);
   };
   @media ${({ theme }) => theme.medias.mobileS} {
-    padding-left: calc((100% - 185px )/2);
-  };
-  @media ${({ theme }) => theme.medias.mobileXS} {
-    padding-left: calc((100% - 145px )/2);
+    padding-left: calc((100% - 220px )/2);
   };
   @media ${({ theme }) => theme.medias.portrait} {
     padding-right: calc((100% - 460px )/2);
     padding-left: 3rem;
   };
-  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopM}`} {
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktop}`} {
     padding-right: calc((100% - 400px )/2);
   };
-  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.desktopS}`} {
-    padding-right: calc((100% - 345px )/2);
-  };
   @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobile}`} {
-    padding-right: calc((100% - 230px )/2);
+    padding-right: calc((100% - 320px )/2);
+  };
+  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileM}`} {
+    padding-right: calc((100% - 275px )/2);
   };
   @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileS}`} {
-    padding-right: calc((100% - 185px )/2);
-  };
-  @media ${({ theme }) => `${theme.medias.portrait} and ${theme.medias.mobileXS}`} {
-    padding-right: calc((100% - 145px )/2);
+    padding-right: calc((100% - 220px )/2);
   };
 `;
 
