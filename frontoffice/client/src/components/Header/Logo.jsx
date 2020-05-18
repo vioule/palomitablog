@@ -55,7 +55,7 @@ export const StyledLink = styled(Link)`
 
 export default () => (
   <Logo>
-    <StyledLink to="/" className="desktop">Palomita</StyledLink>
-    <StyledLink to="/" className="phone">P.</StyledLink>
+    <StyledLink to={{ pathname: '/', state: { scrollY: 0 } }} className="desktop">Palomita</StyledLink>
+    <StyledLink to={{ pathname: '/', state: { scrollY: 0 } }} className="phone">P.</StyledLink>
   </Logo>
 );

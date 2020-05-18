@@ -22,8 +22,8 @@ describe('<Logo />', () => {
     expect(wrapper.find('.desktop').text()).toBe('Palomita');
     expect(wrapper.find('.phone').text()).toBe('P.');
     expect(wrapper.find(StyledLink).length).toBe(2);
-    expect(wrapper.find(StyledLink).get(0).props.to).toBe('/');
-    expect(wrapper.find(StyledLink).get(1).props.to).toBe('/');
+    expect(wrapper.find(StyledLink).get(0).props.to).toStrictEqual({ pathname: '/', state: { scrollY: 0 } });
+    expect(wrapper.find(StyledLink).get(1).props.to).toStrictEqual({ pathname: '/', state: { scrollY: 0 } });
   });
 });
 describe('<StyledLink />', () => {

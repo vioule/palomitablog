@@ -21,7 +21,7 @@ describe('<Categorie />', () => {
     );
     expect(wrapper.find('span').text()).toBe('example');
     const props = wrapper.find(StyledLink).props();
-    expect(props.to).toBe('/example');
+    expect(props.to).toStrictEqual({ pathname: '/example', state: { scrollY: 0 } });
     expect(props.className).toBe('categorie');
     expect(props.name).toBe('example');
   });

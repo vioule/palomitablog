@@ -21,7 +21,7 @@ describe('<Contact />', () => {
     );
     expect(wrapper.find('span').text()).toBe('Contact');
     const props = wrapper.find(StyledLink).props();
-    expect(props.to).toBe('/contact');
+    expect(props.to).toStrictEqual({ pathname: '/contact', state: { scrollY: 0 } });
     expect(props.className).toBe('pagelink');
     expect(props.name).toBe('Contact');
   });
@@ -43,7 +43,7 @@ describe('<About />', () => {
     );
     expect(wrapper.find('span').text()).toBe('A propos');
     const props = wrapper.find(StyledLink).props();
-    expect(props.to).toBe('/about');
+    expect(props.to).toStrictEqual({ pathname: '/about', state: { scrollY: 0 } });
     expect(props.className).toBe('pagelink');
     expect(props.name).toBe('A propos');
   });

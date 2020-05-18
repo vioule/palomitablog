@@ -45,7 +45,7 @@ export const StyledLink = styled(Link)`
 `;
 
 export default ({ name }) => (
-  <StyledLink name={name} to={`/${name}`} className="categorie">
+  <StyledLink name={name} to={{ pathname: `/${name}`, state: { scrollY: 0 } }} className="categorie">
     <span>{name}</span>
   </StyledLink>
 );

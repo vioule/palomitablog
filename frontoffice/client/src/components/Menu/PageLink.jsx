@@ -42,12 +42,12 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Contact = () => (
-  <StyledLink name="Contact" to="/contact" className="pagelink">
+  <StyledLink name="Contact" to={{ pathname: '/contact', state: { scrollY: 0 } }} className="pagelink">
     <span>Contact</span>
   </StyledLink>
 );
 export const About = () => (
-  <StyledLink name="A propos" to="/about" className="pagelink">
+  <StyledLink name="A propos" to={{ pathname: '/about', state: { scrollY: 0 } }} className="pagelink">
     <span>A propos</span>
   </StyledLink>
 );
