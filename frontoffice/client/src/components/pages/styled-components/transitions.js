@@ -13,7 +13,7 @@ const Body = styled.main`
   }
   &.fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 1000ms linear 500ms;
+    transition: opacity 500ms ease-in 500ms;
   }
   &.fade-exit {
     opacity: 1;
@@ -21,7 +21,7 @@ const Body = styled.main`
   }
   &.fade-exit.fade-exit-active {
     opacity: 0;
-    transition: opacity 500ms linear;
+    transition: opacity 500ms ease-out;
   }
 `;
 
