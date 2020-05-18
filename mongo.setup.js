@@ -55,7 +55,7 @@ Aliquam laoreet, ipsum eget rutrum dictum, ligula dui dapibus orci, eu rutrum tu
 {
   title: 'Far far away, behind the word mountains, far from.',
   date: new Date(),
-  categorie: 'cuisine',
+  categorie: 'deco',
   content: [
     {
       key: 'I1234T',
@@ -85,7 +85,7 @@ Aliquam laoreet, ipsum eget rutrum dictum, ligula dui dapibus orci, eu rutrum tu
 {
   title: 'Far far away, behind the word mountains, far from.',
   date: new Date(),
-  categorie: 'cuisine',
+  categorie: 'voyages',
   content: [
     {
       key: 'I1234T',

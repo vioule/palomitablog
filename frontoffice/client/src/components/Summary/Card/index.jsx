@@ -32,7 +32,7 @@ export default ({
   categorie, title, date, paragraph, reverse,
 }) => (
   <Div reverse={reverse}>
-    <Categorie categorie={categorie} link="/" />
+    <Categorie categorie={categorie} />
     <Title title={title} />
     <Paragraph paragraph={paragraph} />
     <ArticleLink link="/" />

@@ -16,4 +16,4 @@ export const H3 = styled.h3`
   }
 `;
 
-export default ({ categorie, link }) => <H3><Link to={link}>{categorie}</Link></H3>;
+export default ({ categorie }) => <H3><Link to={{ pathname: `/${categorie}`, state: { scrollY: 0 } }}>{categorie}</Link></H3>;
