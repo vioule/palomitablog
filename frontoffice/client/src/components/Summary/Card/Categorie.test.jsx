@@ -26,8 +26,7 @@ describe('<Categorie />', () => {
     expect(wrapper.find(Link).length).toBe(1);
     expect(wrapper.find(Link).text()).toBe('MyCategorie');
     expect(wrapper.props().categorie).toBe('MyCategorie');
-    expect(wrapper.find(Link).props().to).toBe('MyLink');
-    expect(wrapper.props().link).toBe('MyLink');
+    expect(wrapper.find(Link).props().to).toStrictEqual({ pathname: '/MyCategorie', state: { scrollY: 0 } });
   });
 });
 
