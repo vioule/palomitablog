@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import Theme from '../../../theme';
+import Theme from '../../../../theme';
 import ArticleLink, { StyledLink } from './ArticleLink';
 
 describe('<ArticleLink />', () => {

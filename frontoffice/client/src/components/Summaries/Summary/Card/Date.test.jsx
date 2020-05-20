@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
-import Theme from '../../../theme';
+import Theme from '../../../../theme';
 import Date, { Time } from './Date';
 
 describe('<Date />', () => {

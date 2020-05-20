@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
-import Theme from '../../../theme';
+import Theme from '../../../../theme';
 import Card, { Div } from './index';
 import Date from './Date';
 import ArticleLink from './ArticleLink';

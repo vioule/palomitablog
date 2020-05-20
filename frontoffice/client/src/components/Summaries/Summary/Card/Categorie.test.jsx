@@ -3,8 +3,8 @@ import { mount } from 'enzyme';
 import { BrowserRouter, Link } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import Theme from '../../../theme';
-import Categorie, { H3 } from './Categorie';
+import Theme from '../../../../theme';
+import Categorie, { StyledH3 } from './Categorie';
 
 describe('<Categorie />', () => {
   it('should have correct descendants and props', () => {
@@ -20,9 +20,9 @@ describe('<Categorie />', () => {
         ),
       },
     );
-    expect(wrapper.find(H3).length).toBe(1);
+    expect(wrapper.find(StyledH3).length).toBe(1);
     expect(wrapper.children().length).toBe(1);
-    expect(wrapper.find(H3).children().length).toBe(1);
+    expect(wrapper.find(StyledH3).children().length).toBe(1);
     expect(wrapper.find(Link).length).toBe(1);
     expect(wrapper.find(Link).text()).toBe('MyCategorie');
     expect(wrapper.props().categorie).toBe('MyCategorie');
@@ -30,10 +30,10 @@ describe('<Categorie />', () => {
   });
 });
 
-describe('<H3 />', () => {
+describe('<StyledH3 />', () => {
   it('should render styles correctly', () => {
     const wrapper = mount(
-      <H3 />,
+      <StyledH3 />,
       {
         wrappingComponent: ({ children }) => (
           <ThemeProvider theme={Theme}>
