@@ -8,11 +8,17 @@ const Article = styled.article`
   display: flex;
   align-items: center;
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+  &:first-of-type {
+    margin-top: 5rem;
+  };
   @media ${({ theme }) => theme.medias.tablet} {
     flex-direction: column;
   };
   @media ${({ theme }) => theme.medias.mobileM} {
     margin-top: 5rem;
+    &:first-of-type {
+      margin-top: 2.5rem;
+    };
   };
 `;
 
