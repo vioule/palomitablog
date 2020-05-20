@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Body from './styled-components/transitions';
 import Summary from '../Summary';
+import SummaryHeader from '../Summary/Header';
 
-const Categorie = ({ data }) => (
+const Categorie = ({ data, categorie }) => (
   <Body>
+    <SummaryHeader categorie={categorie} length={data.length} />
     {data.map((article, index) => (
       <Summary key={article._id} article={article} reverse={index % 2 === 0} />
     ))}

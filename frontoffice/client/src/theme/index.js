@@ -9,6 +9,7 @@ export default {
   },
   fonts: {
     default: "'Cormorant Garamond',serif",
+    classic: 'Roboto,sans-serif',
     special: "'Playfair Display',serif",
   },
   medias: {
