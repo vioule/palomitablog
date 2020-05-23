@@ -24,7 +24,7 @@ db.createUser({
 
 db.articles.insertMany([{
   title: 'Far far away, behind the word mountains, far from.',
-  date: new Date(),
+  date: new Date('1995-12-17T12:24:00'),
   categorie: 'cuisine',
   content: [
     {
@@ -54,7 +54,7 @@ Aliquam laoreet, ipsum eget rutrum dictum, ligula dui dapibus orci, eu rutrum tu
 },
 {
   title: 'Far far away, behind the word mountains, far from.',
-  date: new Date(),
+  date: new Date('1998-10-04T15:36:14'),
   categorie: 'deco',
   content: [
     {
@@ -84,7 +84,7 @@ Aliquam laoreet, ipsum eget rutrum dictum, ligula dui dapibus orci, eu rutrum tu
 },
 {
   title: 'Far far away, behind the word mountains, far from.',
-  date: new Date(),
+  date: new Date('2005-01-28T05:56:28'),
   categorie: 'voyages',
   content: [
     {
@@ -114,7 +114,7 @@ Aliquam laoreet, ipsum eget rutrum dictum, ligula dui dapibus orci, eu rutrum tu
 },
 {
   title: 'Far far away, behind the word mountains, far from.',
-  date: new Date(),
+  date: new Date('2015-04-05T22:05:00'),
   categorie: 'cuisine',
   content: [
     {
@@ -142,3 +142,5 @@ Aliquam laoreet, ipsum eget rutrum dictum, ligula dui dapibus orci, eu rutrum tu
     },
   ],
 }]);
+
+db.articles.createIndex({ date: 1 });
