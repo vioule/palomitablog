@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const StyledLink = styled(Link)`
-  display: block;
+  align-self: start;
   margin-top: .5rem;
   font-weight: 300;
   font-family: ${({ theme }) => theme.fonts.special};

@@ -41,7 +41,7 @@ describe('<StyledLink />', () => {
         ),
       },
     );
-    expect(wrapper).toHaveStyleRule('display', 'block');
+    expect(wrapper).toHaveStyleRule('align-self', 'start');
     expect(wrapper).toHaveStyleRule('font-weight', '300');
     expect(wrapper).toHaveStyleRule('font-family', Theme.fonts.special);
     expect(wrapper).toHaveStyleRule('color', Theme.colors.normal);
