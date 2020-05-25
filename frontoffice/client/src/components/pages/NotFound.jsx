@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Body from './styled-components/transitions';
+import Main from './styled-components';
 
 const NotFound = () => (
-  <Body>
+  <Main>
     <Link to="/">
       Accueil
     </Link>
-  </Body>
+  </Main>
 );
 export default NotFound;

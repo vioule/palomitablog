@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Body from './styled-components/transitions';
-import Summaries from '../Summaries';
+import Main from './styled-components';
+// import Summaries from '../Summaries';
 
-const Categorie = ({ data, categorie }) => (
-  <Body>
-    <Summaries categorie={categorie} data={data} />
+const Categorie = (/* { data, categorie } */) => (
+  <Main>
+    {/* <Summaries categorie={categorie} data={data} /> */}
     <Link to="/article">
       Article
     </Link>
@@ -18,6 +18,6 @@ const Categorie = ({ data, categorie }) => (
     <Link to="/legals">
       Mentions légales
     </Link>
-  </Body>
+  </Main>
 );
 export default Categorie;

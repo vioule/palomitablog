@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 import Legals from './pages/Legals';
 import NotFound from './pages/NotFound';
 
-export default ({ data }) => {
+export default () => {
   const location = useLocation();
   return (
     <TransitionGroup>
@@ -20,13 +20,16 @@ export default ({ data }) => {
       >
         <Switch location={location}>
           <Route exact path="/">
-            <Home data={data} />
+            <Home />
           </Route>
-          <Route exact path={['/deco', '/style', '/cuisine', '/voyages']}>
+          {/* <Route exact path={['/deco', '/style', '/cuisine', '/voyages']}>
             <Categorie
               data={data.filter((article) => article.categorie === location.pathname.slice(1))}
               categorie={location.pathname.slice(1)}
             />
+          </Route> */}
+          <Route exact path={['/deco', '/style', '/cuisine', '/voyages']}>
+            <Categorie />
           </Route>
           <Route exact path="/article">
             <Article />

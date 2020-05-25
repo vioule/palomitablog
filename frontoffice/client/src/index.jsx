@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import Reducer from './store/reducers';
 import App from './components/App';
 import Theme from './theme';
-import GlobalStyle from './theme/Reset';
+import GlobalStyle from './theme/GlobalStyle';
 import RestoreScroll from './components/ReactRouterDom/RestoreScroll';
 
 const store = createStore(Reducer, applyMiddleware(thunkMiddleware));

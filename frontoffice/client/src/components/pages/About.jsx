@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Body from './styled-components/transitions';
+import Main from './styled-components';
 
 const About = () => (
-  <Body>
+  <Main>
     <Link to="/">
       Accueil
     </Link>
@@ -16,6 +16,6 @@ const About = () => (
     <Link to="/legals">
       Mentions légales
     </Link>
-  </Body>
+  </Main>
 );
 export default About;

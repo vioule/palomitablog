@@ -6,7 +6,6 @@ export default styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2000;
   background-color: ${({ theme }) => theme.colors.white};
   position: fixed;
   top: 0;

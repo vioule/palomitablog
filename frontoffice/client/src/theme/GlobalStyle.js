@@ -1,4 +1,24 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
+
+const Animations = css`
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+};
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in 500ms;
+};
+.fade-exit {
+  opacity: 1;
+  pointer-events: none;
+};
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+};
+`;
 
 const Reset = createGlobalStyle`
   * {
@@ -38,5 +58,6 @@ const Reset = createGlobalStyle`
   button:hover {
     cursor: pointer;
   };
+  ${Animations}
 `;
 export default Reset;

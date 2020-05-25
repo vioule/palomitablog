@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import FullscreenCenterLayout from './styled-components';
+import FullscreenLayout from './styled-components';
+import { appear } from '../../theme/animations';
 
 const AnimatedSvg = styled.svg`
   width: 5rem;
@@ -42,36 +43,35 @@ const AnimatedSvg = styled.svg`
       fill: ${({ theme }) => theme.colors.normal};
     }
   }
+  ${appear};
 `;
 
 export const Loader = () => {
-  const [display, setDisplay] = useState(false);
+  const [appear, setAppear] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
-      setDisplay(!display);
+      setAppear(!appear);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
-  return display
-    ? (
-      <AnimatedSvg viewBox="0 0 100 100">
-        <circle strokeDasharray="300" strokeLinecap="round" className="circle" r="45" cx="50" cy="50" fill="none" />
-        <text
-          alignmentBaseline="middle"
-          textAnchor="middle"
-          x="50"
-          y="50"
-          fontSize="35"
-        >
-          P.
-        </text>
-      </AnimatedSvg>
-    )
-    : null;
+  return (
+    <AnimatedSvg viewBox="0 0 100 100" appear={appear}>
+      <circle strokeDasharray="300" strokeLinecap="round" className="circle" r="45" cx="50" cy="50" fill="none" />
+      <text
+        alignmentBaseline="middle"
+        textAnchor="middle"
+        x="50"
+        y="50"
+        fontSize="35"
+      >
+        P.
+      </text>
+    </AnimatedSvg>
+  );
 };
 
-export const AppLoader = () => (
-  <FullscreenCenterLayout>
+export const PageLoader = () => (
+  <FullscreenLayout>
     <Loader />
-  </FullscreenCenterLayout>
+  </FullscreenLayout>
 );
