@@ -3,13 +3,17 @@ import {
 } from './actions';
 
 const DEFAULT_STATE = {
-  data: [],
+  home: [],
+  deco: [],
+  style: [],
+  cuisine: [],
+  voyages: [],
 };
 
 export default (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_ARTICLES:
-      return { ...state, data: action.payload };
+      return { ...state, [action.payload.page]: action.payload.data };
     default:
       return state;
   }

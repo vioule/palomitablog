@@ -1,15 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Link } from 'react-router-dom';
 import { setArticles } from '../../store/articles/actions';
 import Main from './styled-components';
 import Summaries from '../Summaries';
 import { PageLoader } from '../Loader';
 import useFetch from '../../hooks/useFetchWithStore';
 
-const Home = ({ setArticles, data }) => {
-  const [isFetching, isFailed, isValidated] = useFetch('api/getArticles', !!data.length, setArticles);
+const Page = ({ setArticles, data, page }) => {
+  const categorie = page === 'home' ? null : page;
+  const [{ isFetching, isFailed, isValidated }] = useFetch(
+    { url: 'api/getArticles', params: { categorie } },
+    !!data[page].length,
+    setArticles,
+    page,
+  );
   return (
     <Main>
       <TransitionGroup>
@@ -29,7 +35,7 @@ const Home = ({ setArticles, data }) => {
           classNames="fade"
         >
           <div>
-            <Summaries data={data} />
+            <Summaries data={data[page]} categorie={categorie} />
             <Link to="/article">
               Article
             </Link>
@@ -59,6 +65,6 @@ const Home = ({ setArticles, data }) => {
   );
 };
 export default connect(
-  (state) => ({ data: state.articles.data }),
+  (state) => ({ data: state.articles }),
   { setArticles },
-)(Home);
+)(Page);

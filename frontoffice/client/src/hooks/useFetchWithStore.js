@@ -1,30 +1,21 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const axios = require('axios');
-
-export default (url, validate, dispatch) => {
-  const [isFetching, setIsFetching] = useState(false);
-  const [isFailed, setIsFailed] = useState(false);
-  const [isValidated, setIsValidated] = useState(validate);
-
+export default (request, validate, dispatch, page) => {
+  const [status, setStatus] = useState(
+    { isFetching: false, isFailed: false, isValidated: validate },
+  );
   const fetchData = async () => {
-    setIsFetching(true);
-    setIsValidated(false);
-    setIsFailed(false);
+    setStatus({ isFetching: true, isFailed: false, isValidated: false });
     try {
-      const res = await axios.get(url);
-      setIsFetching(false);
-      setIsValidated(true);
-      setIsFailed(false);
-      dispatch(res.data);
+      const res = await axios.get(request.url, { params: request.params });
+      setStatus({ isFetching: false, isFailed: false, isValidated: true });
+      dispatch(res.data, page);
     } catch (err) {
-      setIsFetching(false);
-      setIsValidated(false);
-      setIsFailed(true);
+      setStatus({ isFetching: false, isFailed: true, isValidated: false });
     }
   };
+  useEffect(() => { if (!validate) { fetchData(request); } }, []);
 
-  useEffect(() => { if (!validate) { fetchData(url); } }, []);
-
-  return [isFetching, isFailed, isValidated];
+  return [status];
 };

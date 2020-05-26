@@ -1,8 +1,7 @@
 import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Home from './pages/Home';
-import Categorie from './pages/Categorie';
+import Summaries from './pages/Summaries';
 import About from './pages/About';
 import Article from './pages/Article';
 import Contact from './pages/Contact';
@@ -19,17 +18,8 @@ export default () => {
         classNames="fade"
       >
         <Switch location={location}>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          {/* <Route exact path={['/deco', '/style', '/cuisine', '/voyages']}>
-            <Categorie
-              data={data.filter((article) => article.categorie === location.pathname.slice(1))}
-              categorie={location.pathname.slice(1)}
-            />
-          </Route> */}
-          <Route exact path={['/deco', '/style', '/cuisine', '/voyages']}>
-            <Categorie />
+          <Route exact path={['/', '/deco', '/style', '/cuisine', '/voyages']}>
+            <Summaries page={location.pathname.slice(1) || 'home'} />
           </Route>
           <Route exact path="/article">
             <Article />
