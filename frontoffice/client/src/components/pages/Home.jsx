@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { getArticles } from '../../store/articles/actions';
+import { setArticles } from '../../store/articles/actions';
 import Main from './styled-components';
 import Summaries from '../Summaries';
 import { PageLoader } from '../Loader';
+import useFetch from '../../hooks/useFetchWithStore';
 
-
-const Home = ({
-  getArticles, data, isFetching, isFailed, isValidated,
-}) => {
-  useEffect(() => { if (!data.length) { getArticles(); } }, []);
+const Home = ({ setArticles, data }) => {
+  const [isFetching, isFailed, isValidated] = useFetch('api/getArticles', !!data.length, setArticles);
   return (
     <Main>
       <TransitionGroup>
@@ -61,6 +59,6 @@ const Home = ({
   );
 };
 export default connect(
-  (state) => ({ ...state.articles }),
-  { getArticles },
+  (state) => ({ data: state.articles.data }),
+  { setArticles },
 )(Home);
