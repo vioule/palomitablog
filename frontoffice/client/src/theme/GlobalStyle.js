@@ -55,6 +55,9 @@ const Reset = createGlobalStyle`
       padding: 0 20px;
     };
   };
+  button {
+    background: none;
+  }
   button:hover {
     cursor: pointer;
   };

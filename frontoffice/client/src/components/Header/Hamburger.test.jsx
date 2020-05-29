@@ -41,7 +41,6 @@ describe('<Button />', () => {
         ),
       },
     );
-    expect(wrapper).toHaveStyleRule('background-color', 'transparent');
     expect(wrapper).toHaveStyleRule('border', `1px solid ${Theme.colors.black}`, {
       modifier: '&>div',
     });

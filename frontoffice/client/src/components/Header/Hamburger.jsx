@@ -9,7 +9,6 @@ export const Button = styled.button`
   right: 0;
   width: 1.2rem;
   height: 1rem;
-  background-color: transparent;
   margin: 20px;
   &>div {
     position: absolute;
