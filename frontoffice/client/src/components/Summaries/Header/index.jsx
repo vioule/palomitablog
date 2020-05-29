@@ -13,10 +13,10 @@ export const Div = styled.div`
   };
 `;
 
-export default ({ categorie, length }) => (
+export default ({ categorie, total }) => (
   <Div>
     <Categorie categorie={categorie} />
     <Line />
-    <Articles length={length} />
+    <Articles total={total} />
   </Div>
 );

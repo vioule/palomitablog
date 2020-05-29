@@ -10,7 +10,7 @@ export default (request, validate, dispatch, page) => {
     try {
       const res = await axios.get(request.url, { params: request.params });
       setStatus({ isFetching: false, isFailed: false, isValidated: true });
-      dispatch(res.data, page);
+      dispatch({ ...res.data, page });
     } catch (err) {
       setStatus({ isFetching: false, isFailed: true, isValidated: false });
     }

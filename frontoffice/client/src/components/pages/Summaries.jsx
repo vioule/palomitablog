@@ -35,7 +35,7 @@ const Page = ({ setArticles, data, page }) => {
           classNames="fade"
         >
           <div>
-            <Summaries data={data[page]} categorie={categorie} />
+            <Summaries data={data[page].data} total={data[page].total} categorie={categorie} />
             <Link to="/article">
               Article
             </Link>

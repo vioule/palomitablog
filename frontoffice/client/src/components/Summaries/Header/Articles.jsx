@@ -16,11 +16,11 @@ export const Div = styled.div`
   };
 `;
 
-export default ({ length }) => (
+export default ({ total }) => (
   <Div>
-    <b>{length}</b>
+    <b>{total}</b>
     <span>
-      {` article${length > 1 ? 's' : ''}`}
+      {` article${total > 1 ? 's' : ''}`}
     </span>
   </Div>
 );
