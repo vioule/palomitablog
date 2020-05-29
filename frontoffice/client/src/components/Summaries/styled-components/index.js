@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const H3 = styled.h3`
   font-size: 1rem;
@@ -14,5 +14,16 @@ export const Line = styled.div`
   margin: .5rem 0;
   @media ${({ theme }) => theme.medias.mobileM} {
     margin: .25rem 0;
+  };
+`;
+
+export const articles = css`
+  font-family: ${({ theme }) => theme.fonts.classic};
+  font-size: .8rem;
+  & span {
+    font-weight: 300;
+  }
+  @media ${({ theme }) => theme.medias.mobileM} {
+    font-size: .7rem;
   };
 `;
