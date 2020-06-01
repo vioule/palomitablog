@@ -14,7 +14,6 @@ export default ({
     }
   };
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <Link to={to} onClick={handleOnClick} {...other}>
       {children}
     </Link>

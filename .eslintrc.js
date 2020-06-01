@@ -23,7 +23,8 @@ module.exports = {
     'react/prop-types': 'off',
     'no-shadow': 'off',
     'no-nested-ternary': 'off',
-    'no-underscore-dangle': ["error", { "allow": ["_id", "__html"] }]
+    'no-underscore-dangle': ["error", { "allow": ["_id", "__html"] }],
+    "react/jsx-props-no-spreading": 'off'
   },
   settings: {
     'import/resolver': {node: {extensions: ['.js','.jsx']}},
