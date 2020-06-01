@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import SafeLink from '../ReactRouterDom/SafeLink';
+
 
 const Logo = styled.div`
   position: absolute;
@@ -48,14 +49,14 @@ const Logo = styled.div`
   };
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledSafeLink = styled(SafeLink)`
   font-family: ${({ theme }) => theme.fonts.special};
   color: ${({ theme }) => theme.colors.black};
 `;
 
 export default () => (
   <Logo>
-    <StyledLink to={{ pathname: '/', state: { scrollY: 0 } }} className="desktop">Palomita</StyledLink>
-    <StyledLink to={{ pathname: '/', state: { scrollY: 0 } }} className="phone">P.</StyledLink>
+    <StyledSafeLink to="/" className="desktop">Palomita</StyledSafeLink>
+    <StyledSafeLink to="/" className="phone">P.</StyledSafeLink>
   </Logo>
 );

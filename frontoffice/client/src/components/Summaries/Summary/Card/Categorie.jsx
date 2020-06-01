@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import SafeLink from '../../../ReactRouterDom/SafeLink';
 import { H3 } from '../../styled-components';
 
 export const StyledH3 = styled(H3)`
@@ -12,4 +12,4 @@ export const StyledH3 = styled(H3)`
   }
 `;
 
-export default ({ categorie }) => <StyledH3><Link to={{ pathname: `/${categorie}`, state: { scrollY: 0 } }}>{categorie}</Link></StyledH3>;
+export default ({ categorie }) => <StyledH3><SafeLink to={`/${categorie}`}>{categorie}</SafeLink></StyledH3>;
