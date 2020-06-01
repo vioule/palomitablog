@@ -1,7 +1,8 @@
 const express = require('express');
-const { getArticles } = require('./controllers');
+const { getArticles, appendArticles } = require('./controllers');
 
 const ApiRouter = express.Router();
 ApiRouter.get('/getArticles', getArticles);
+ApiRouter.get('/appendArticles', appendArticles);
 
 module.exports = ApiRouter;

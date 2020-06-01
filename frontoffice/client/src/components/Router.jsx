@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Switch, Route, useHistory,
 } from 'react-router-dom';
@@ -12,6 +12,11 @@ import NotFound from './pages/NotFound';
 
 export default () => {
   const history = useHistory();
+  useEffect(() => {
+    if (['/', '/deco', '/style', '/cuisine', '/voyages'].includes(history.location.pathname)) {
+      history.replace(history.location.state, { display: 5 });
+    }
+  }, []);
   return (
     <TransitionGroup>
       <CSSTransition

@@ -10,11 +10,11 @@ export const Button = styled.button`
   }
 `;
 
-export default ({ count }) => (
-  <Button>
-    <b>{count}</b>
+export default ({ rest, onClick }) => (
+  <Button onClick={onClick}>
+    <b>{rest}</b>
     <span>
-      {` article${count > 1 ? 's' : ''} précédent${count > 1 ? 's' : ''}`}
+      {` article${rest > 1 ? 's' : ''} précédent${rest > 1 ? 's' : ''}`}
     </span>
   </Button>
 );
