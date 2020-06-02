@@ -4,8 +4,8 @@ import FullscreenLayout from './styled-components';
 import { appear } from '../../theme/animations';
 
 const AnimatedSvg = styled.svg`
-  width: 5rem;
-  height: 5rem;
+  width: ${({ size }) => size};
+  height: ${({ size }) => size};
   &>circle{
     transform-origin: 50% 50%;
     animation: animation 1s alternate infinite ease-in-out, rotation 2s infinite linear;
@@ -46,7 +46,7 @@ const AnimatedSvg = styled.svg`
   ${appear};
 `;
 
-export const Loader = () => {
+export const Loader = ({ size }) => {
   const [appear, setAppear] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,7 +55,7 @@ export const Loader = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <AnimatedSvg viewBox="0 0 100 100" appear={appear}>
+    <AnimatedSvg viewBox="0 0 100 100" appear={appear} size={size}>
       <circle strokeDasharray="300" strokeLinecap="round" className="circle" r="45" cx="50" cy="50" fill="none" />
       <text
         alignmentBaseline="middle"
@@ -72,6 +72,6 @@ export const Loader = () => {
 
 export const PageLoader = () => (
   <FullscreenLayout>
-    <Loader />
+    <Loader size="5rem" />
   </FullscreenLayout>
 );
