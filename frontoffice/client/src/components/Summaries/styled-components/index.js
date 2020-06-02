@@ -27,3 +27,11 @@ export const articles = css`
     font-size: .7rem;
   };
 `;
+
+export const running = css`
+  margin-top: 5rem;
+  color: ${({ theme }) => theme.colors.dark};
+  @media ${({ theme }) => theme.medias.mobileM} {
+    margin-top: 2.5rem;
+  };
+`;
