@@ -8,7 +8,7 @@ import { Line, running } from '../styled-components';
 import Articles from './Articles';
 import { addPageData } from '../../../store/pages/actions';
 import { Loader } from '../../Loader';
-
+import Error from './Error';
 
 export const Div = styled.div`
   position: absolute;
@@ -53,7 +53,9 @@ export default ({
           dispatch(addPageData({ ...res.data, page }));
         }, 500);
       } catch (err) {
-        setStatus({ isFetching: false, isFailed: true, isValidated: false });
+        setTimeout(() => {
+          setStatus({ isFetching: false, isFailed: true, isValidated: false });
+        }, 500);
       }
     }
   };
@@ -69,7 +71,12 @@ export default ({
             classNames="fade"
           >
             <Div>
-              <div>Une erreur est survenue.</div>
+              <Line />
+              <Articles
+                rest={rest}
+                onClick={onClick}
+              />
+              <Error />
             </Div>
           </CSSTransition>
         )
@@ -84,6 +91,7 @@ export default ({
                 <Loader size="3rem" />
               </Div>
             </CSSTransition>
+
           )
           : isValidated
             ? (
