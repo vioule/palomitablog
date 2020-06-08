@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
+  parser: "babel-eslint",
   extends: [
     'plugin:react/recommended',
     "plugin:jest/recommended",
@@ -28,5 +29,5 @@ module.exports = {
   },
   settings: {
     'import/resolver': {node: {extensions: ['.js','.jsx']}},
-},
+  },
 };

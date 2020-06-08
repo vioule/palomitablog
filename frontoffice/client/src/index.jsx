@@ -10,8 +10,10 @@ import App from './components/App';
 import Theme from './theme';
 import GlobalStyle from './theme/GlobalStyle';
 import RestoreScroll from './components/ReactRouterDom/RestoreScroll';
+import loadPolyfills from './functions/loadPolyfills';
 
 const store = createStore(Reducer, applyMiddleware(thunkMiddleware));
+loadPolyfills();
 
 render(
   <Provider store={store}>
