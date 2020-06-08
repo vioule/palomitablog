@@ -6,6 +6,7 @@ import Main from './styled-components';
 import Summaries from '../Summaries';
 import { PageLoader } from '../Loader';
 import useFetch from '../../hooks/useFetchWithStore';
+import Footer from '../Footer';
 
 const Page = ({ setPageData, content, page }) => {
   const categorie = page === 'home' ? null : page;
@@ -33,11 +34,14 @@ const Page = ({ setPageData, content, page }) => {
           timeout={1000}
           classNames="fade"
         >
-          <Summaries
-            page={page}
-            categorie={categorie}
-            {...content[page]}
-          />
+          <>
+            <Summaries
+              page={page}
+              categorie={categorie}
+              {...content[page]}
+            />
+            <Footer />
+          </>
         </CSSTransition>
         )}
         { isFetching && (
