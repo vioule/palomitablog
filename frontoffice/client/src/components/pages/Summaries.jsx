@@ -33,13 +33,11 @@ const Page = ({ setPageData, content, page }) => {
           timeout={1000}
           classNames="fade"
         >
-          <div>
-            <Summaries
-              page={page}
-              categorie={categorie}
-              {...content[page]}
-            />
-          </div>
+          <Summaries
+            page={page}
+            categorie={categorie}
+            {...content[page]}
+          />
         </CSSTransition>
         )}
         { isFetching && (
