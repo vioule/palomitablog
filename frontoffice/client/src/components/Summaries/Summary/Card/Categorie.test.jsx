@@ -1,7 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import SafeLink from '../../../ReactRouterDom/SafeLink';
 
 import Theme from '../../../../theme';
 import Categorie, { StyledH3 } from './Categorie';
@@ -23,10 +24,10 @@ describe('<Categorie />', () => {
     expect(wrapper.find(StyledH3).length).toBe(1);
     expect(wrapper.children().length).toBe(1);
     expect(wrapper.find(StyledH3).children().length).toBe(1);
-    expect(wrapper.find(Link).length).toBe(1);
-    expect(wrapper.find(Link).text()).toBe('MyCategorie');
+    expect(wrapper.find(SafeLink).length).toBe(1);
+    expect(wrapper.find(SafeLink).text()).toBe('MyCategorie');
     expect(wrapper.props().categorie).toBe('MyCategorie');
-    expect(wrapper.find(Link).props().to).toStrictEqual({ pathname: '/MyCategorie', state: { scrollY: 0 } });
+    expect(wrapper.find(SafeLink).props().to).toBe('/MyCategorie');
   });
 });
 
