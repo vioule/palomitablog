@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "intersection-observer": "^0.10.0",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.10",
